@@ -1,0 +1,44 @@
+<div id="root"></div>
+
+<style>
+  #container {
+    background: silver;
+    border: 1px solid;
+    width: 200px;
+    height: 150px;
+
+    position: relative;
+  }
+
+  #box {
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    align: center;
+
+    position: absolute;
+  }
+</style>
+
+<div id="container">
+  container
+  <div id="box"> BOX </div>
+</div>
+
+<script>
+  setInterval (move, 10)
+
+  let d= document.getElementById('box');
+  
+  pos=0;
+  function move() {
+    if (pos>=150) {
+      pos= 0;
+    }
+    else{
+      pos += 1;
+      d.style.left = pos + "px";
+    }
+  }
+</script>
